@@ -5,7 +5,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t sriniv23/docker-react .
+  - docker build -t sriniv23/docker-react -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true sriniv23/docker-react npm run test
@@ -16,7 +16,7 @@ deploy:
   app: "Docker"
   env: "Docker-env"
   bucket_name: "elasticbeanstalk-us-west-2-139793558214"
-  bucket_path: "DockerNew"
+  bucket_path: "Docker"
 
   on:
     branch: master

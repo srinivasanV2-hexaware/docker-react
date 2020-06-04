@@ -13,8 +13,8 @@ script:
 deploy:
   provider: elasticbeanstalk
   region: "us-west-2"
-  app: "DockerTest"
-  env: "Dockertest-env"
+  app: "Docker"
+  env: "Docker-env"
   bucket_name: "elasticbeanstalk-us-west-2-139793558214"
   bucket_path: "DockerNew"
 
